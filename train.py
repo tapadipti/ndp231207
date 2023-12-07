@@ -1,5 +1,5 @@
 import random
-import sys
+import sys, time
 from dvclive import Live
 
 with Live(save_dvc_exp=True) as live:
@@ -10,4 +10,5 @@ with Live(save_dvc_exp=True) as live:
         live.log_metric("train/loss", epochs - epoch - random.random())
         live.log_metric("val/accuracy",epoch + random.random() )
         live.log_metric("val/loss", epochs - epoch - random.random())
+        time.sleep(2)
         live.next_step()
