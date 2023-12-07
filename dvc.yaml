@@ -1,5 +1,12 @@
 stages:
   train:
-    cmd: train.py
+    cmd: python train.py
     deps:
     - train.py
+params:
+- dvclive/params.yaml
+metrics:
+- dvclive/metrics.json
+plots:
+- dvclive/plots/metrics:
+    x: step
