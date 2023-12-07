@@ -1,0 +1,5 @@
+stages:
+  train:
+    cmd: train.py
+    deps:
+    - train.py
