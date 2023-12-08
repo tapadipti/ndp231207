@@ -1,1 +1,4 @@
 epochs: 10
+sleep_time: 1.1
+image_size: ten
+data_size: 1
